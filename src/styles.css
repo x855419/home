@@ -1,1 +1,354 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: #0f1111; }
+
+header .nav-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    float: none;
+}
+
+.nav-flex .navbar {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    float: none;
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-box: 1;
+    -moz-box: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar.nav-bluebeacon {
+    background-color: #232f3e;
+}
+
+.nav-belt {
+    background-color: #131921;
+}
+
+.nav-flex .nav-belt {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    float: none;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    height: 60px;
+}
+
+.nav-belt {
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+    z-index: 5;
+}
+
+.nav-belt .nav-left, .nav-belt .nav-fill {
+    height: 60px;
+}
+
+.navbar * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.nav-flex .navbar .nav-left {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    float: none;
+}
+
+.nav-flex .navbar .nav-belt .nav-logo {
+    width: auto;
+    padding: 4px 0 0 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    float: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-flex-shrink: 0;
+    -moz-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.nav-flex .navbar .nav-belt .nav-logo {
+    margin-left: 11px;
+}
+
+.nav-flex .navbar .nav-belt .nav-logo .nav-logo-link {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    float: none;
+    -webkit-flex-shrink: 0;
+    -moz-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    text-decoration: none;
+    padding: 1px 8px 0 6px;
+    margin: 1px;
+}
+
+.nav-logo .nav-logo-base {
+    float: left;
+    text-indent: -500px;
+    background-position: -10px -51px;
+    width: 97px;
+    height: 30px;
+}
+
+.navbar .nav-sprite {
+    background-image: url("https://images-eu.ssl-images-amazon.com/images/G/30/gno/sprites/nav-sprite-global-2x-hm-dsk-reorg._CB405936353_.png");
+    background-size: 350px;
+}
+
+.nav-flex .navbar .nav-belt .nav-logo .nav-logo-link .nav-logo-base {
+    margin-top: 12px;
+    pointer-events: none;
+}
+
+.nav-flex .navbar .nav-fill {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    float: none;
+    -webkit-box: 1;
+    -moz-box: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.nav-flex .navbar .nav-belt .nav-search {
+    padding: 10px 4px 10px 3px;
+    height: 60px;
+}
+
+.nav-flex .navbar .nav-belt .nav-search {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    float: none;
+    -webkit-box: 1;
+    -moz-box: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 10px 4px 10px 3px;
+}
+
+.nav-search {
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 10px 4px 0 3px;
+    height: 60px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    border-radius: 0\9;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: auto;
+}
+
+.nav-search .nav-searchbar {
+    display: block;
+    position: relative;
+    height: 40px;
+    margin-bottom: 0;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    border-radius: 0\9;
+}
+
+
+.nav-flex .navbar .nav-belt .nav-search .nav-searchbar, .nav-flex .navbar .nav-belt .nav-search .nav-searchbar .nav-fill, .nav-flex .navbar .nav-belt .nav-search .nav-searchbar .nav-search-field {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    float: none;
+    -webkit-box: 1;
+    -moz-box: 1;
+    -webkit-flex: 1 1 0px;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0px;
+}
+
+.nav-flex .navbar .nav-belt .nav-search .nav-left, .nav-flex .navbar .nav-belt .nav-search .nav-right {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    float: none;
+}
+
+.nav-flex .navbar .nav-belt .nav-search .nav-fill, .nav-flex .navbar .nav-belt .nav-search .nav-left, .nav-flex .navbar .nav-belt .nav-search .nav-right {
+    height: auto;
+}
+
+.nav-flex .navbar .nav-belt .nav-search .nav-search-scope {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    float: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.navbar.nav-bluebeacon .nav-search .nav-search-scope {
+    background-color: #f3f3f3;
+    background-image: none;
+    border-left: 1px solid #f3f3f3;
+    border-top: 1px solid #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.nav-search .nav-search-facade {
+    position: relative;
+    float: left;
+    cursor: default;
+    overflow: hidden;
+    top: 3px;
+}
+
+.nav-search .nav-search-dropdown {
+    position: absolute;
+    display: block;
+    top: -1px;
+    left: 0;
+    height: 35px;
+    width: auto;
+    font-family: inherit;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: visible;
+    border: 0;
+    line-height: 35px;
+}
+
+.nav-flex .navbar .nav-belt .nav-search .nav-searchbar .nav-input {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    float: none;
+}
+
+.nav-search .nav-search-field .nav-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    line-height: 15px;
+    padding: 7px 10px 10px 0;
+    margin: 0;
+    border: 0;
+    height: 38px;
+    font-family: inherit;
+    font-size: 15px;
+    background: 0 0;
+    color: #111;
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+    text-indent: 8px;
+    direction: ltr;
+}
+
+.nav-flex .navbar .nav-belt .nav-search .nav-searchbar .nav-search-submit .nav-search-submit-text {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    float: none;
+    -webkit-box: 1;
+    -moz-box: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: auto;
+    height: auto;
+    background-position: 2px -280px;
+}
+
+.nav-flex .navbar .nav-belt .nav-search .nav-searchbar .nav-search-submit {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    float: none;
+}
+
+.navbar.nav-bluebeacon .nav-search .nav-search-submit {
+    background-color: #febd69;
+    background-image: none;
+    border: none;
+    width: 45px;
+}
