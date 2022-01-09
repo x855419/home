@@ -4,10 +4,10 @@ pragma solidity >=0.4.22 <0.9.0;
 contract AccessControl {
 
     /// owner address
-    address private owner = msg.sender;
+    address public owner = msg.sender;
     
     /// map of admins
-    mapping(address=>bool) private admins;
+    mapping(address=>bool) public admins;
 
     modifier onlyOwner() {
         require(msg.sender == owner, "This function is restricted to the contract's owner");
@@ -22,10 +22,6 @@ contract AccessControl {
     function changeOwner(address _address) external onlyOwner {
         require(_address != address(0));
         owner = _address;
-    }
-
-    function getOwner() internal view returns (address) {
-        return owner;
     }
 
     function isAdmin(address _address) internal view returns (bool) {
