@@ -76,7 +76,7 @@ contract CipherShop is AccessControl, FeeMechanism {
     /// Address with the ids of the items to watch
     mapping(address=>uint256[]) private watch_items;
 
-    mapping(uint256=>mapping(address=>bool)) items_white_list;
+    mapping(uint256=>mapping(address=>bool)) private items_white_list;
 
     function getItem(uint256 _item_id) external view returns (address item_owner, uint256 item_price, string memory item_name, string memory item_description, string memory item_pictures_hash, uint256 item_category, uint256 item_location, uint256 item_sending_location, uint256 item_sending_method, uint256 item_arrival_time, bool item_accept_erc20, IERC20 item_currency, bool item_admits_devolution, bool item_visibility, bool item_private, uint256 item_watchers, bool item_cancelled, bool item_cancelled_by_admin) {
         require(items[_item_id].item_initialized, "Item doesn't exist");
