@@ -5,11 +5,19 @@ import "./AccessControl.sol";
 import "./FeeMechanism.sol";
 import "./SafeMath.sol";
 import "./IERC20.sol";
+import "./Cshop.sol";
 
 /// CipherShop smart contract
 contract CipherShop is AccessControl, FeeMechanism {
 
     using SafeMath for uint256;
+
+    uint256 seller_reward = 300e18;
+    uint256 buyer_reward = 50e18;
+
+    IERC20 reward_token;
+
+    mapping(address=>uint256) private pending_rewards;
 
     /// Item struct
     struct Item {
@@ -227,7 +235,6 @@ contract CipherShop is AccessControl, FeeMechanism {
         items[_item_id].item_cancelled = false;
     }
 
-
     function restartItemByAdmin(uint256 _item_id) external onlyAdmin {
         require(items[_item_id].item_initialized == true);
         require(items[_item_id].item_cancelled == true);
@@ -304,6 +311,8 @@ contract CipherShop is AccessControl, FeeMechanism {
             transfer(items_transactions[_item_id][_transaction_id].seller, value);
         }
         items_transactions[_item_id][_transaction_id].completed = true;
+        pending_rewards[items_transactions[_item_id][_transaction_id].buyer].add(buyer_reward);
+        pending_rewards[items_transactions[_item_id][_transaction_id].seller].add(seller_reward);
     }
 
     function markTransactionAsReceivedBySeller(uint256 _item_id, uint256 _transaction_id) external {
@@ -420,6 +429,35 @@ contract CipherShop is AccessControl, FeeMechanism {
         require(items_transactions[_item_id][_transaction_id].marked_devolution_as_sent);
         require(items_transactions[_item_id][_transaction_id].buyer == msg.sender);
         items_transactions[_item_id][_transaction_id].marked_devolution_as_received_by_buyer = true;
+    }
+
+    function changeRewardToken(IERC20 _token) external onlyAdmin {
+        reward_token = _token;
+    }
+
+    function airdropRewards(address[] calldata _recipients) external onlyAdmin {
+        for(uint256 i = 0; i < _recipients.length; i++) {
+            bool success = reward_token.transfer(_recipients[i], pending_rewards[_recipients[i]]);
+            if (success) {
+                pending_rewards[_recipients[i]] = 0;
+            }
+        }
+    }
+
+    function withdrawRewards() external {
+        require(pending_rewards[msg.sender] > 0);
+        bool success = reward_token.transfer(msg.sender, pending_rewards[msg.sender]);
+        if (success) {
+            pending_rewards[msg.sender] = 0;
+        }
+    }
+
+    function changeSellerReward(uint256 _reward) external onlyAdmin {
+        seller_reward = _reward;
+    }
+
+    function changeBuyerReward(uint256 _reward) external onlyAdmin {
+        buyer_reward = _reward;
     }
 
     function transfer(address payable _to, uint256 _quantity) internal {

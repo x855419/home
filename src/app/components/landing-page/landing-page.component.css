@@ -1,0 +1,65 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    -moz-box-pack: center;
+    justify-content: center;
+    -moz-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem 4rem;
+    width: 100%;
+    z-index: 3;
+    position: sticky;
+    top: -1px;
+    left: -1px;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    transition: background-color 0.25s ease 0s;
+}
+
+.header-content {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: row;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+}
+
+.nav-wrapper {
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+}
+
+.nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.btn-link {
+    margin-left: 16px;
+    padding: 8px 0.85rem;
+    text-decoration: none;
+    border-radius: 12px;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    width: fit-content !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    height: fit-content !important;
+    border: 2px solid transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(95.5deg, rgba(15, 53, 255, 0.3) 12.82%, rgba(255, 72, 181, 0.3) 41.96%, rgba(15, 53, 255, 0.08) 75.06%, rgba(15, 53, 255, 0.11) 107.66%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: rgb(255, 0, 122) 1px 1000px 1px inset;
+    opacity: 0.9;
+    text-decoration: none;
+    cursor: pointer;
+}

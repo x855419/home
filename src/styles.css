@@ -3,6 +3,7 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: #0f1111; }
 
+/*
 header .nav-flex {
     display: -webkit-box;
     display: -moz-box;
@@ -352,3 +353,4 @@ header .nav-flex {
     border: none;
     width: 45px;
 }
+*/

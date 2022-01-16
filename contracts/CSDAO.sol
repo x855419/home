@@ -37,7 +37,7 @@ contract DAOInterface {
     uint constant maxDepositDivisor = 100;
 
     //Token contract
-    Token token;
+    Cshop token;
 
     // Proposals to spend the DAO's ether
     Proposal[] public proposals;
