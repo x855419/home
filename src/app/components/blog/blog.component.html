@@ -1,0 +1,147 @@
+<main>
+    <div class="layout-body">
+        <div class="content-wrapper">
+            <h1 class="home-title">Blog</h1>
+            <div class="filters-container">
+                <div class="row">
+                    <div class="category-selector">
+                        <div class="category-icon">
+                            <span class="dot t-l"></span>
+                            <span class="dot t-r"></span>
+                            <span class="dot b-l"></span>
+                            <span class="dot b-r"></span>
+                        </div>
+                        <p class="open-category-list" (click)="categoriesOpen = true;">
+                            <span>Category</span>
+                            <span class="current-category">{{actualCategory}}</span>
+                        </p>
+                        <p class="open-search" style="display: flex; align-items: center;" (click)="searchOpen = true;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.06 25.06">
+                                <title>Search</title>
+                                <g id="Layer_2" data-name="Layer 2">
+                                    <g id="Layer_1-2" data-name="Layer 1">
+                                        <path d="M15.56,3A6.5,6.5,0,1,1,11,4.9,6.46,6.46,0,0,1,15.56,3m0-3a9.5,9.5,0,1,0,6.72,2.78A9.47,9.47,0,0,0,15.56,0Z"></path>
+                                        <rect x="-0.7" y="18.25" width="12" height="3" transform="translate(-12.41 9.54) rotate(-45)"></rect>
+                                    </g>
+                                </g>
+                            </svg>
+                            <span class="search-label">Search</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-list-container" [ngStyle]="{'display': categoriesOpen ? 'block' : 'none'}">
+                <div class="row">
+                    <div class="overlay-logo">
+                        <a href="/">
+                            <img src="/assets/main-logo/logo_thegoodfather_1_363,40x55px-100.jpg">
+                        </a>
+                    </div>
+                    <a class="close-category-list" (click)="categoriesOpen = false;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.47 36.47">
+                            <title>Close</title>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <rect x="16.49" y="-5.8" width="3.5" height="48.08" transform="translate(-7.55 18.24) rotate(-45)"></rect>
+                                    <rect x="-5.8" y="16.49" width="48.08" height="3.5" transform="translate(-7.55 18.24) rotate(-45)"></rect>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="content">
+                    <h5>Categories</h5>
+                    <ul>
+                        <li *ngFor="let category of categories;">
+                            <a [ngClass]="{'actual-category': category === actualCategory}" [routerLink]="['/blog']" (click)="filterByCategory(category)">{{category}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search-container" [ngStyle]="{'display':searchOpen ? 'block' : 'none'}">
+                <div class="row">
+                    <div class="overlay-logo">
+                        <a [routerLink]="['/blog']">
+                            <img src="/assets/main-logo/logo_thegoodfather_1_363,40x55px-100.jpg">
+                        </a>
+                    </div>
+                    <a class="close-search" (click)="searchOpen = false;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.47 36.47">
+                            <title>Close</title>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <rect x="16.49" y="-5.8" width="3.5" height="48.08" transform="translate(-7.55 18.24) rotate(-45)"></rect>
+                                    <rect x="-5.8" y="16.49" width="48.08" height="3.5" transform="translate(-7.55 18.24) rotate(-45)"></rect>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="content">
+                    <h5>Search</h5>
+                    <form class="search-form" [formGroup]="searchForm">
+                        <div class="field-item">
+                            <input class="search-field" type="text" formControlName="query">
+                            <span [ngClass]="{'search-submit': true, 'active': searchForm.valid}" (click)="searchContent()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.36 24.86">
+                                    <title>Search</title>
+                                    <g id="Layer_2" data-name="Layer 2">
+                                        <g id="Layer_1-2" data-name="Layer 1">
+                                            <rect y="10.93" width="33" height="3"></rect>
+                                            <polygon points="22.93 24.86 20.81 22.74 31.12 12.43 20.81 2.12 22.93 0 35.36 12.43 22.93 24.86"></polygon>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div *ngIf="searchedArticles" class="search-results-header">
+                <p>
+                    <ng-container>
+                        Results for 
+                    </ng-container>
+                    <a class="search-term" [routerLink]="['/blog']" (click)="clearSearchContent()">{{searchTerm}} 
+                        <span class="clear-search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.47 36.47">
+                                <title>Delete</title>
+                                <g id="Layer_2" data-name="Layer 2">
+                                    <g id="Layer_1-2" data-name="Layer 1">
+                                        <rect x="16.49" y="-5.8" width="3.5" height="48.08" transform="translate(-7.55 18.24) rotate(-45)"></rect>
+                                        <rect x="-5.8" y="16.49" width="48.08" height="3.5" transform="translate(-7.55 18.24) rotate(-45)"></rect>
+                                    </g>
+                                </g>
+                            </svg>
+                        </span>
+                    </a>
+                </p>
+            </div>
+            <div *ngIf="noSearchResults" class="no-results">
+                <p>No results that matched the search term.</p>
+                <p class="open-search try-new-search" (click)="searchOpen = true;">Try a new search?</p>
+            </div>
+            <div class="article-grid">
+                <div class="row">
+                    <div *ngFor="let article of articlesShowed;" class="article">
+                        <div class="image">
+                            <a [routerLink]="article.url">
+                                <img [src]="article.img">
+                            </a>
+                        </div>
+                        <h5>{{article.category}}</h5>
+                        <h3>
+                            <a [routerLink]="article.url">{{article.title}}</a>
+                        </h3>
+                        <p>{{article.description}}
+                            <a [routerLink]="article.url">Read more</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="!filteredArticles && pages !== (pagesIndex + 1)" class="load-more">
+                <button (click)="loadMore()">Load More</button>
+            </div>
+        </div>
+    </div>
+</main>

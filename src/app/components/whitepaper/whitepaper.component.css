@@ -1,0 +1,104 @@
+.layout-body {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(239, 239, 239, 0.34) none repeat scroll 0% 0%;
+}
+
+.content-wrapper {
+    width: 90%;
+    max-width: 1340px;
+    padding: 64px 0px;
+    min-height: 80vh;
+    margin-bottom: 60px;
+}
+
+.pages-title {
+    display: flex;
+    flex-direction: column;
+    -moz-box-pack: end;
+    justify-content: flex-end;
+    will-change: transform;
+    align-items: flex-start;
+    width: 100%;
+    /*height: calc(-180px + 100vh);*/
+    padding-bottom: 3%;
+    row-gap: 24px;
+}
+
+.pages-body-title {
+    font-size: 40px;
+    overflow-wrap: normal;
+    font-weight: 600;
+    margin: 0px;
+    text-align: center;
+}
+
+.pages-title-description {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+.column-autocolumn {
+    display: grid;
+    grid-auto-rows: auto;
+    row-gap: 16px;
+}
+
+.pages-section {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0px;
+}
+
+.pages-flex-row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+}
+
+.pages-card {
+    /*    
+    mix-blend-mode: lighten;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /*
+    width: 100%;
+    */
+    border: 1px solid rgba(0, 0, 0, 0.19);
+    padding: 2rem;
+    border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 0px 1px, rgba(0, 0, 0, 0.02) 0px 4px 8px, rgba(0, 0, 0, 0.02) 0px 16px 24px, rgba(0, 0, 0, 0.02) 0px 24px 32px;
+    background-color: white;
+
+    width: 28%;
+    height: 120px;
+}
+
+.pages-card a {
+    font-size: 22px;
+    text-align: center;
+}
+
+.pages-card p {
+    margin: 0;
+    color: rgb(135, 141, 155);
+    text-align: center;
+}

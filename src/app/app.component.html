@@ -1,1 +1,46 @@
+<header class="header">
+    <div class="header-content">
+        <div class="header-logo"></div>
+        <nav class="nav-wrapper">
+            <a class="nav-link">DOCS</a>
+            <a class="nav-link">DAO</a>
+            <a class="nav-link" [routerLink]="'./blog'">BLOG</a>
+            <a class="nav-link">FAQ</a>
+            <a class="btn-link">Launch APP</a>
+        </nav>
+    </div>
+</header>
 <router-outlet></router-outlet>
+<footer class="footer-wrapper">
+    <div class="main-footer">
+        <div class="language-dropdown"></div>
+        <div class="links">
+            <a>Home</a>
+            <a>Documents</a>
+            <a>Governance</a>
+            <a>Forum</a>
+            <a [routerLink]="['./blog']">Blog</a>
+            <a>FAQ</a>
+        </div>
+    </div>
+    <div class="secondary-footer">
+        <div class="social-links">
+            <a>
+                <i class="social-icon reddit"></i>
+            </a>
+            <a>
+                <i class="social-icon github"></i>
+            </a>
+            <a>
+                <i class="social-icon twitter"></i>
+            </a>
+        </div>
+        <div class="copyright">
+            @
+            <!---->
+            2022
+            <!---->
+            CipherShop
+        </div>
+    </div>
+</footer>
