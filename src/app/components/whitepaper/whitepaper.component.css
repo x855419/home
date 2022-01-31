@@ -66,6 +66,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 32px;
+    flex-wrap: wrap;
 }
 
 .pages-card {
@@ -88,7 +89,7 @@
     box-shadow: rgba(0, 0, 0, 0.02) 0px 0px 1px, rgba(0, 0, 0, 0.02) 0px 4px 8px, rgba(0, 0, 0, 0.02) 0px 16px 24px, rgba(0, 0, 0, 0.02) 0px 24px 32px;
     background-color: white;
 
-    width: 28%;
+    width: 26%;
     height: 120px;
 }
 
