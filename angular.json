@@ -59,19 +59,24 @@
                   "maximumError": "4kb"
                 }
               ]
-            }
-          }
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "decentralized-shop:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "decentralized-shop:build:production"
+            },
+            "development": {
+              "browserTarget": "decentralized-shop:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -112,14 +117,17 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "decentralized-shop:serve"
+            "protractorConfig": "e2e/protractor.conf.js"
           },
           "configurations": {
             "production": {
               "devServerTarget": "decentralized-shop:serve:production"
+            },
+            "development": {
+              "devServerTarget": "decentralized-shop:serve:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         }
       }
     }
