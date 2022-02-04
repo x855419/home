@@ -5,12 +5,6 @@
             <div class="filters-container">
                 <div class="row">
                     <div class="category-selector">
-                        <div class="category-icon">
-                            <span class="dot t-l"></span>
-                            <span class="dot t-r"></span>
-                            <span class="dot b-l"></span>
-                            <span class="dot b-r"></span>
-                        </div>
                         <p class="open-category-list" (click)="categoriesOpen = true;">
                             <span>Category</span>
                             <span class="current-category">{{actualCategory}}</span>
@@ -124,18 +118,18 @@
             <div class="article-grid">
                 <div class="row">
                     <div *ngFor="let article of articlesShowed;" class="article">
-                        <div class="image">
-                            <a [routerLink]="article.url">
+                        <a [routerLink]="article.url">
+                            <div class="image">
                                 <img [src]="article.img">
-                            </a>
-                        </div>
-                        <h5>{{article.category}}</h5>
-                        <h3>
-                            <a [routerLink]="article.url">{{article.title}}</a>
-                        </h3>
-                        <p>{{article.description}}
-                            <a [routerLink]="article.url">Read more</a>
-                        </p>
+                            </div>
+                            <h5>{{article.category}}</h5>
+                            <h3>{{article.title}}</h3>
+                            <p>{{article.description}}
+                                <!--
+                                    <a [routerLink]="article.url">Read more</a>
+                                -->
+                            </p>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -24,26 +24,33 @@ export class BlogComponent implements OnInit {
   filteredArticles: boolean = false;
   searchedArticles: boolean = false;
 
+  /*
   languages: string[] = ['en', 'us'];
   actualLanguage: string = 'es';
+  */
 
   articles: any[][] = [
     [
+      {
+        url: './initial-private-purchase-available',
+        img: './assets/articles-logos/es/arbolesdenavidad_338,11x338,11px-100.jpg',
+        category: 'Announcements',
+        title: 'First phase of investor acquisition available now.',
+        description: 'First phase of investor recruitment available here. If you have ETH, buy CSHOP to invest and make possible the launch of the protocol. Available for all users with limited stock.'
+      },
       {
         url: './about-dao-token-distribution-and-investor-recruitment',
         img: './assets/articles-logos/es/arbolesdenavidad_338,11x338,11px-100.jpg',
         category: 'Announcements',
         title: 'About CSHOP token distribution and investor recruitment.',
-        description: 'Details on the initial distribution of CSHOP tokens, with detailed graphs and investor attraction phases. Available to all users with limited stock.',
-        date: '27 January, 2022'
+        description: 'Details on the initial distribution of CSHOP tokens, with detailed graphs and investor attraction phases.'
       },
       {
         url: './introduction-to-ciphershop',
         img: './assets/articles-logos/es/elcorazondelagua_338,11x338,11px-100.jpg',
         category: 'Announcements',
         title: 'Introduction to CipherShop.',
-        description: 'Discover what CipherShop is, the components, its functionality, thus premiering its release.',
-        date: '27 January, 2022'
+        description: 'Discover what CipherShop is, the components, its functionality, thus premiering its release.'
       }
     ]
   ];

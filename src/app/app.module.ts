@@ -12,6 +12,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { IntroductionToCiphershopComponent } from './components/posts/introduction-to-ciphershop/introduction-to-ciphershop.component';
 import { AboutDaoTokenDistributionAndInvestorRecruitmentComponent } from './components/posts/about-dao-token-distribution-and-investor-recruitment/about-dao-token-distribution-and-investor-recruitment.component';
 import { WhitepaperComponent } from './components/whitepaper/whitepaper.component';
+import { InitialPrivatePurchaseAvailableComponent } from './components/posts/initial-private-purchase-available/initial-private-purchase-available.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { WhitepaperComponent } from './components/whitepaper/whitepaper.componen
     BlogComponent,
     IntroductionToCiphershopComponent,
     AboutDaoTokenDistributionAndInvestorRecruitmentComponent,
-    WhitepaperComponent
+    WhitepaperComponent,
+    InitialPrivatePurchaseAvailableComponent
   ],
   imports: [
     BrowserModule,

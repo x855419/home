@@ -33,6 +33,11 @@
     align-items: center;
 }
 
+.nav-wrapper a:link, .nav-wrapper a:visited {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
 .nav-link {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -107,6 +112,10 @@
     font-weight: 400;
     margin-bottom: 8px;
     margin-left: 16px;
+}
+
+.main-footer .links a:link, .main-footer .links a:visited {
+    text-decoration: none;
 }
 
 .main-footer .links a:hover {
