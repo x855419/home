@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="article-wrapper">
-                    <div class="article-container" style="margin: 0 0 0 auto;">
+                    <div class="article-container">
                         <div class="article-content">
                             <h2 id="introduction">Introduction</h2>
                             <p>The first phase of investor recruitment is available. Anyone with ETH, can buy CSHOP tokens, and become part of the group of initial small investors, for which, they will have available: 9,680,000 CSHOP within 4 years.</p>
@@ -24,10 +24,43 @@
                             <h2 id="buy">Buy CSHOP</h2>
                             <div class="pages-card-post">
                                 <div class="row">
-                                    <div class="column-autocolumn">
+                                    <div class="column-autocolumn" style="width: 100%;">
                                         <h2 style="margin: 0;">Distribution</h2>
-                                        <div class="distribution-slider">
-
+                                        <div class="distribution-bar">
+                                            <div class="row" style="position: relative;">
+                                                <div class="bar-price-tag first">
+                                                    <div class="arrow-down"></div>
+                                                    <span>0.16$</span>
+                                                </div>
+                                                <div class="bar-price-tag second">
+                                                    <div class="arrow-down"></div>
+                                                    <span>0.17$</span>
+                                                </div>
+                                                <div class="bar-price-tag third">
+                                                    <div class="arrow-down"></div>
+                                                    <span>0.18$</span>
+                                                </div>
+                                                <div class="bar-price-tag fourth">
+                                                    <div class="arrow-down"></div>
+                                                    <span>0.19$</span>
+                                                </div>
+                                                <div class="bar-price-tag fifth">
+                                                    <div class="arrow-down"></div>
+                                                    <span>0.20$</span>
+                                                </div>
+                                            </div>
+                                            <mat-progress-bar mode="determinate" [value]="progressBarValue"></mat-progress-bar>
+                                            <div class="bar-dot first"></div>
+                                            <div class="bar-dot second"></div>
+                                            <div class="bar-dot third"></div>
+                                            <div class="bar-dot fourth"></div>
+                                            <div class="bar-dot fifth"></div>
+                                            <div class="row" style="position: relative; margin-top: 10px;">
+                                                <span class="bar-tag first">400k CSHOP</span>
+                                                <span class="bar-tag second">800k CSHOP</span>
+                                                <span class="bar-tag third">1.2M CSHOP</span>
+                                                <span class="bar-tag fourth">1.6M CSHOP</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -38,7 +71,7 @@
                                     </div>
                                     <div class="column-autocolumn">
                                         <h2>Tokens Sold</h2>
-                                        <p>0 CSHOP</p>
+                                        <p>{{priceFormat(soldCSHOPToken)}} CSHOP</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -48,7 +81,7 @@
                                     </div>
                                     <div class="column-autocolumn">
                                         <h2>Get Started</h2>
-                                        <button class="btn-link">Invest</button>
+                                        <button class="btn-link" [disabled]="!availaiblePurchase">Invest</button>
                                     </div>
                                 </div>
                             </div>

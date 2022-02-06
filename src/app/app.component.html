@@ -2,9 +2,9 @@
     <div class="header-content">
         <div class="header-logo"></div>
         <nav class="nav-wrapper">
-            <a class="nav-link">DOCS</a>
+            <a class="nav-link" [routerLink]="['./docs']">DOCS</a>
             <a class="nav-link">DAO</a>
-            <a class="nav-link" [routerLink]="'./blog'">BLOG</a>
+            <a class="nav-link" [routerLink]="['./blog']">BLOG</a>
             <a class="nav-link">FAQ</a>
             <a class="btn-link">Launch APP</a>
         </nav>
@@ -16,7 +16,7 @@
         <div class="language-dropdown"></div>
         <div class="links">
             <a>Home</a>
-            <a>Documents</a>
+            <a [routerLink]="['./docs']">Documents</a>
             <a>Governance</a>
             <a>Forum</a>
             <a [routerLink]="['./blog']">Blog</a>
@@ -25,9 +25,11 @@
     </div>
     <div class="secondary-footer">
         <div class="social-links">
-            <a>
-                <i class="social-icon reddit"></i>
-            </a>
+            <!--
+                <a>
+                    <i class="social-icon reddit"></i>
+                </a>
+            -->
             <a>
                 <i class="social-icon github"></i>
             </a>

@@ -14,6 +14,7 @@
     /*
     width: 90%;
     */
+    width: 100%;
     max-width: 1340px;
     padding: 64px 0px;
     min-height: 80vh;
@@ -101,11 +102,11 @@
     margin: 0 auto;
 }
 
+/*
 .category-selector {
-    /*
     float: left;
-    */
 }
+*/
 
 .category-selector p {
     display: inline-block;
@@ -118,7 +119,7 @@
 
 .current-category {
     display: inline-block;
-    opacity: 0.7;
+    opacity: 0.6;
     margin-left: 10px;
     transition: color .2s ease-in-out;
 }
@@ -131,7 +132,7 @@
     position: relative;
     top: 2px;
     float: right;
-    opacity: 0.7;
+    opacity: 0.6;
     margin-bottom: 0;
     cursor: pointer;
 }
@@ -244,7 +245,7 @@
 }
 
 .category-list-container li a, .search-container li a {
-    opacity: 0.7;
+    opacity: 0.6;
     text-decoration: none;
 }
 
@@ -318,13 +319,14 @@
 }
 
 .search-results-header .search-term {
-    transition: color .2s ease-in-out;
+    color:rgb(0, 0, 0);
+    opacity: 0.6;
+    text-decoration: none;
 }
 
 .search-results-header .search-term:hover {
-    color: #878d9b;
+    opacity: 1;
     text-decoration: none;
-    transition: color .2s ease-in-out;
 }
 
 .search-results-header .clear-search-icon {
@@ -335,8 +337,7 @@
 }
 
 .search-results-header .search-term:hover .clear-search-icon svg {
-    fill: #878d9b;
-    transition: fill .2s ease-in-out;
+    fill: #000;
 }
 
 .no-results {
@@ -354,12 +355,12 @@
 .no-results .try-new-search {
     position: static;
     float: none;
-    color: #878d9b;
-    transition: color .2s ease-in-out;
+    opacity: 0.6;
+    transition: opacity .2s ease-in-out;
 }
 
 .no-results .try-new-search:hover {
-    color: #878d9b;
+    opacity: 1;
     transition: color .2s ease-in-out;
 }
 
@@ -493,6 +494,11 @@
     border-radius: 24px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 0px 1px, rgba(0, 0, 0, 0.02) 0px 4px 8px, rgba(0, 0, 0, 0.02) 0px 16px 24px, rgba(0, 0, 0, 0.02) 0px 24px 32px;
     background-color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.article-grid .article:hover {
+    scale: 1.05;
 }
 
 .article-grid .article a {
@@ -623,7 +629,7 @@
     color: #878d9b;
     text-decoration: none;
     border: 2px solid #878d9b;
-    transition: border .1s ease-in-out,color .1s ease-in-out;
+    transition: border .1s ease-in-out, color .1s ease-in-out;
 }
 
 @media screen and (max-width: 1024px) {

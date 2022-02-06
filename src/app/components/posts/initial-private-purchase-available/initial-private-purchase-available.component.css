@@ -94,6 +94,7 @@
 }
 
 .article-content ul li {
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
@@ -270,12 +271,13 @@
 }
 
 .pages-card-post p {
-    margin: 10px 0 20px;
-    font-size: 22px;
+    margin: 0px 0 20px;
+    font-size: 20px;
+    color: rgb(135, 141, 155);
 }
 
 .pages-card-post button {
-    margin: 10px 25px 20px;
+    margin: 0px 25px 20px;
 }
 
 .btn-link {
@@ -306,6 +308,126 @@
     opacity: 0.8;
     background-color: rgba(255, 255, 255, 0.04) !important;
     transform: scale(1);
+}
+
+.distribution-bar {
+    position: relative;
+    margin: 50px 0px;
+}
+
+.distribution-bar .bar-price-tag {
+    position: absolute;
+    font-size: 13px;
+    color: #5a5a5a;
+    text-align: right;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #ebebeb;
+    border-radius: 20px;
+    line-height: 25px;
+    width: 50px;
+}
+
+.bar-price-tag .arrow-down {
+    position: relative;
+    left: 33%;
+    top: 15px;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 14px solid #ebebeb;
+}
+
+.bar-price-tag span {
+    position: relative;
+    left: -19px;
+}
+
+.bar-price-tag.first {
+    top: -40px;
+    left: calc(0% - 22px);
+}
+
+.bar-price-tag.second {
+    top: -40px;
+    left: calc(20% - 22px);
+}
+
+.bar-price-tag.third {
+    top: -40px;
+    left: calc(40% - 22px);
+}
+
+.bar-price-tag.fourth {
+    top: -40px;
+    left: calc(60% - 22px);
+}
+
+.bar-price-tag.fifth {
+    top: -40px;
+    left: calc(80% - 22px);
+}
+
+.distribution-bar .bar-dot {
+    position: absolute;
+    height: 3px;
+    width: 3px;
+    background-color: rgb(194, 194, 194);
+    border: solid 2px rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+.distribution-bar .bar-tag {
+    position: absolute;
+    font-size: 16px;
+    color: rgb(135, 141, 155);
+}
+
+.bar-dot.first {
+    top: -1px;
+    left: 0%;
+}
+
+.bar-dot.second {
+    top: -1px;
+    left: 20%;
+}
+
+.bar-dot.third {
+    top: -1px;
+    left: 40%;
+}
+
+.bar-dot.fourth {
+    top: -1px;
+    left: 60%;
+}
+
+.bar-dot.fifth {
+    top: -1px;
+    left: 80%;
+}
+
+.bar-tag.first {
+    top: 0px;
+    left: 20%;
+}
+
+.bar-tag.second {
+    top: 0px;
+    left: 40%;
+}
+
+.bar-tag.third {
+    top: 0px;
+    left: 60%;
+}
+
+.bar-tag.fourth {
+    top: 0px;
+    left: 80%;
 }
 
 @media screen and (max-width: 1024px) {
