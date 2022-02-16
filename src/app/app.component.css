@@ -27,6 +27,25 @@
     justify-content: space-between;
 }
 
+.header-logo {
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.header-logo:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.header-logo img {
+    height: 32px;
+    width: 32px;
+    opacity: 1;
+}
+
 .nav-wrapper {
     display: flex;
     -moz-box-align: center;
@@ -101,6 +120,137 @@
     justify-content: center;
 }
 
+.language-dropdown {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    outline: 0;
+    text-align: left;
+    -webkit-transition: width .1s ease,-webkit-box-shadow .1s ease;
+    transition: width .1s ease,-webkit-box-shadow .1s ease;
+    transition: box-shadow .1s ease,width .1s ease;
+    transition: box-shadow .1s ease,width .1s ease,-webkit-box-shadow .1s ease;
+    -webkit-tap-highlight-color: transparent;
+    transform: translateY(-4px);
+}
+
+.language-dropdown .text {
+    display: inline-block;
+    -webkit-transition: none;
+    transition: none;
+    font-weight: 500;
+}
+
+.language-icon-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.language-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.language-icon.en {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='nonzero'%3E%3Cpath d='M0 0h16v16H0z'/%3E%3Cg%3E%3Ccircle cx='8' cy='8' r='8' fill='%23F0F0F0'/%3E%3Cg fill='%230052B4'%3E%3Cpath d='M1.654 3.13A7.97 7.97 0 0 0 .276 5.912h4.161L1.654 3.13zM15.724 5.913a7.971 7.971 0 0 0-1.378-2.784l-2.783 2.784h4.161zM.276 10.087a7.972 7.972 0 0 0 1.378 2.784l2.783-2.784H.276zM12.87 1.654A7.971 7.971 0 0 0 10.088.276v4.161l2.784-2.783zM3.13 14.346a7.972 7.972 0 0 0 2.783 1.378v-4.161L3.13 14.346zM5.913.276a7.972 7.972 0 0 0-2.784 1.378l2.784 2.783V.276zM10.087 15.724a7.972 7.972 0 0 0 2.784-1.378l-2.784-2.783v4.161zM11.563 10.087l2.783 2.784a7.971 7.971 0 0 0 1.378-2.784h-4.161z'/%3E%3C/g%3E%3Cg fill='%23D80027'%3E%3Cpath d='M15.932 6.957H9.044V.067a8.08 8.08 0 0 0-2.087 0v6.89H.067a8.08 8.08 0 0 0 0 2.086h6.89v6.89a8.08 8.08 0 0 0 2.086 0v-6.89h6.89a8.08 8.08 0 0 0 0-2.086z'/%3E%3Cpath d='M10.087 10.087l3.57 3.57a8.02 8.02 0 0 0 .47-.514l-3.056-3.056h-.984zM5.913 10.087l-3.57 3.57c.164.164.336.32.514.47l3.056-3.056v-.984zM5.913 5.913l-3.57-3.57a8.02 8.02 0 0 0-.47.514l3.056 3.056h.984zM10.087 5.913l3.57-3.57a8.01 8.01 0 0 0-.514-.47l-3.056 3.056v.984z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.language-dropdown .language-icon-label {
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 8px;
+    font-weight: 500;
+    color: #16141a;
+}
+
+.language-dropdown > .dropdown.icon {
+    position: relative;
+    width: auto;
+    font-size: 22px;
+    margin: 0 0 0 8px;
+    color: #16141a;
+    line-height: 1;
+}
+
+.language-dropdown .menu {
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.12);
+    margin-top: 13px;
+    padding: 8px 0;
+    border-radius: 6px;
+    bottom: 100%;
+    left: 0;
+    cursor: auto;
+    position: absolute;
+    display: none;
+    outline: 0;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    font-size: 1em;
+    text-shadow: none;
+    text-align: left;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(34,36,38,.15);
+    box-shadow: 0 2px 3px 0 rgba(34,36,38,.15);
+    border: 1px solid rgba(34,36,38,.15);
+    -webkit-transition: opacity .1s ease;
+    transition: opacity .1s ease;
+    z-index: 11;
+    will-change: transform,opacity;
+}
+
+.visible {
+    display: block !important;
+    visibility: visible !important;
+}
+
+.language-dropdown .menu > .item {
+    color: #16141a;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 10px 16px !important;
+    font-weight: 400;
+    min-width: 210px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    border: none;
+    border-top-color: currentcolor;
+    border-top-style: none;
+    border-top-width: medium;
+    height: auto;
+    text-align: left;
+    border-top: none;
+    border-top-width: medium;
+    line-height: 1em;
+    color: rgba(0,0,0,.87);
+    padding: .78571429rem 1.14285714rem !important;
+    font-size: 1rem;
+    text-transform: none;
+    font-weight: 400;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-touch-callout: none;
+}
+
+.language-dropdown .menu > .item:first-child {
+    border-top-width: 0;
+}
+
+.language-dropdown .menu .active.item {
+    font-weight: 500;
+    background-color: #f3f2f5;
+    box-shadow: none;
+    z-index: 12;
+}
+
+.language-dropdown .menu .selected.item {
+    background: rgba(0,0,0,.03);
+    background-color: rgba(0, 0, 0, 0.03);
+    color: rgba(0,0,0,.95);
+}
+
 .main-footer .links {
     display: flex;
     flex-flow: row wrap;
@@ -159,4 +309,18 @@
 
 .social-icon.twitter {
     background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxNicgaGVpZ2h0PScxNCcgdmlld0JveD0nMCAwIDE2IDE0Jz48ZyBmaWxsPSdub25lJyBmaWxsLXJ1bGU9J2V2ZW5vZGQnPjxwYXRoIGQ9J00tMi0zaDIwdjIwSC0yeicvPjxwYXRoIGZpbGw9JyM2NzYzNzAnIGZpbGwtcnVsZT0nbm9uemVybycgZD0nTTE1Ljc3OCAxLjkxOWMtLjU1Mi4yOC0xLjE5Ny40NjYtMS44NDEuNDY2LjY0NC0uMzczIDEuMTk2LTEuMDI2IDEuMzgtMS43NzItLjY0NC4zNzMtMS4yODguNjUzLTIuMDI0Ljc0NkMxMi43NC43MDYgMTEuOTEyLjMzMyAxMC45OS4zMzNjLTEuNzQ3IDAtMy4yMiAxLjQ5Mi0zLjIyIDMuMjY0IDAgLjI4IDAgLjQ2Ny4wOTIuNzQ2QzUuMTkyIDQuMjUgMi43OTkgMi45NDUgMS4yMzUuOTg2YTMuMjUyIDMuMjUyIDAgMCAwLS40NiAxLjY3OWMwIDEuMTE5LjU1MiAyLjE0NSAxLjQ3MiAyLjcwNC0uNTUyIDAtMS4wMTItLjE4Ni0xLjQ3My0uMzczIDAgMS41ODYgMS4xMDUgMi44OTEgMi41NzggMy4xNzEtLjI3Ni4wOTMtLjU1My4wOTMtLjgyOS4wOTMtLjE4NCAwLS4zNjggMC0uNjQ0LS4wOTMuMzY4IDEuMzA2IDEuNTY1IDIuMjM4IDMuMDM4IDIuMjM4LTEuMTA1Ljg0LTIuNDg2IDEuNC0zLjk1OCAxLjRILjIyMmE4Ljg2NiA4Ljg2NiAwIDAgMCA0Ljg3OSAxLjQ5MWM1Ljg5IDAgOS4xMTItNC45NDIgOS4xMTItOS4yMzJ2LS40NjdjLjU1Mi0uMzczIDEuMTA1LTEuMDI1IDEuNTY1LTEuNjc4eicvPjwvZz48L3N2Zz4=);
+}
+
+.social-icon.telegram img, .social-icon.linkedin img, .social-icon.contact img {
+    position: relative;
+    top: -2px;
+}
+
+.social-icon.telegram img, .social-icon.linkedin img {
+    width: 16px;
+}
+
+.social-icon.contact img {
+    height: 14px;
+    max-width: 20px;
 }

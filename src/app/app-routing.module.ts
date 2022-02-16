@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { BlogComponent } from './components/blog/blog.component';
-import { DocumentationComponent } from './components/documentation/documentation.component';
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { HomeComponent } from './components/home/home.component';
 import { AboutDaoTokenDistributionAndInvestorRecruitmentComponent } from './components/posts/about-dao-token-distribution-and-investor-recruitment/about-dao-token-distribution-and-investor-recruitment.component';
 import { InitialPrivatePurchaseAvailableComponent } from './components/posts/initial-private-purchase-available/initial-private-purchase-available.component';
 import { IntroductionToCiphershopComponent } from './components/posts/introduction-to-ciphershop/introduction-to-ciphershop.component';
@@ -12,15 +11,11 @@ import { WhitepaperComponent } from './components/whitepaper/whitepaper.componen
 const routes: Routes = [
   {
     path: '',
-    component: LandingPageComponent
+    component: HomeComponent
   },
   {
     path: 'whitepaper',
     component: WhitepaperComponent
-  },
-  {
-    path: 'docs',
-    component: DocumentationComponent
   },
   {
     path: 'blog',

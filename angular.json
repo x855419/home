@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "decentralized-shop": {
+    "home": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/decentralized-shop",
+            "outputPath": "dist/home",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,7 +57,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumError": "10kb"
                 }
               ]
             },
@@ -71,10 +71,10 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "decentralized-shop:build:production"
+              "browserTarget": "home:build:production"
             },
             "development": {
-              "browserTarget": "decentralized-shop:build:development"
+              "browserTarget": "home:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "decentralized-shop:build"
+            "browserTarget": "home:build"
           }
         },
         "test": {
@@ -123,10 +123,10 @@
           },
           "configurations": {
             "production": {
-              "devServerTarget": "decentralized-shop:serve:production"
+              "devServerTarget": "home:serve:production"
             },
             "development": {
-              "devServerTarget": "decentralized-shop:serve:development"
+              "devServerTarget": "home:serve:development"
             }
           },
           "defaultConfiguration": "development"
@@ -134,5 +134,5 @@
       }
     }
   },
-  "defaultProject": "decentralized-shop"
+  "defaultProject": "home"
 }

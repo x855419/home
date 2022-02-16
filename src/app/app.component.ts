@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'decentralized-shop';
+  title = 'home';
+  constructor(private router: Router) {
+  }
+
+  goHome(): void {
+    this.router.navigate(['/']);
+  }
 }
