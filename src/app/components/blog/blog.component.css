@@ -542,31 +542,40 @@
 */
 
 .article-grid .image {
-    position: relative;
-    width: 100%;
-    height: 0;
+    display: flex;
+    border-top: transparent;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom: solid 1.2px rgba(0, 0, 0, 0.19);
     margin-bottom: 30px;
     background: #eee;
     overflow: hidden;
 }
 
 .article-grid .image img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     width: 100%;
-    max-width: 9999px;
-    height: 100%;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+
+.article-subsection {
+    display: flex;
+    padding: 0px 2rem;
+    justify-content: space-between;
+}
+
+.article-subsection span {
+    color: #878d9b;
+    font-size: 14px;
+    line-height: 21px;
 }
 
 .article-grid h5 {
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #000;
     margin-bottom: 15px;
-    padding: 0px 2rem;
 }
 
 .article-grid h3 {

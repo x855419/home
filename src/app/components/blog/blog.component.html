@@ -122,7 +122,10 @@
                             <div class="image">
                                 <img [src]="article.img">
                             </div>
-                            <h5>{{article.category}}</h5>
+                            <div class="article-subsection">
+                                <h5>{{article.category}}</h5>
+                                <span>{{article.date}}</span>
+                            </div>
                             <h3>{{article.title}}</h3>
                             <p>{{article.description}}
                                 <!--

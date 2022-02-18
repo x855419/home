@@ -33,24 +33,27 @@ export class BlogComponent implements OnInit {
     [
       {
         url: './initial-private-purchase-available',
-        img: './assets/articles-logos/es/arbolesdenavidad_338,11x338,11px-100.jpg',
+        img: './assets/posts/covers/preico_post_339x339_cover.png',
         category: 'Announcements',
         title: 'First phase of investor acquisition available now.',
-        description: 'First phase of investor recruitment available here. If you have ETH, buy CSHOP to invest and make possible the launch of the protocol. Available for all users with limited stock.'
+        description: 'First phase of investor recruitment available here. If you have ETH, buy CSHOP to invest and make possible the launch of the protocol. Available for all users with limited stock.',
+        date: 'February 3, 2022'
       },
       {
         url: './about-dao-token-distribution-and-investor-recruitment',
-        img: './assets/articles-logos/es/arbolesdenavidad_338,11x338,11px-100.jpg',
+        img: './assets/posts/covers/distribution_post_339x339_cover.png',
         category: 'Announcements',
         title: 'About CSHOP token distribution and investor recruitment.',
-        description: 'Details on the initial distribution of CSHOP tokens, with detailed graphs and investor attraction phases.'
+        description: 'Details on the initial distribution of CSHOP tokens, with detailed graphs and investor attraction phases.',
+        date: 'February 1, 2022'
       },
       {
         url: './introduction-to-ciphershop',
-        img: './assets/articles-logos/es/elcorazondelagua_338,11x338,11px-100.jpg',
+        img: './assets/posts/covers/introduction_post_339x339_cover.png',
         category: 'Announcements',
         title: 'Introduction to CipherShop.',
-        description: 'Discover what CipherShop is, the components, its functionality, thus premiering its release.'
+        description: 'Discover what CipherShop is, the components, its functionality, thus premiering its release.',
+        date: 'January 27, 2022'
       }
     ]
   ];
